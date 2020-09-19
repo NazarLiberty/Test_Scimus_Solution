@@ -1,0 +1,81 @@
+// Write your styles here
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
+
+@mixin flexSettings($jContent, $aItems) {
+    display: flex;
+    justify-content: $jContent;
+    align-items: $aItems;
+};
+@mixin buttonSettings{
+    display: block;
+    width: 250px;
+    height: 50px;
+    background-color: $buttonColor;
+    @include flexSettings(center,center);
+    font-family: $cantarell;
+    color: white;
+    text-transform: uppercase;
+}
+*{
+    box-sizing: border-box;
+    & a{
+        &:link{
+            color: inherit;
+            text-decoration: none;
+        }
+        &:visited{
+            color: inherit;
+        }
+    }
+}
+
+.header{
+    @include flexSettings(center,center);
+    width: 100vw;
+    height: 100vh;
+    background: $bgSettings;
+    background-size: cover;
+    position: relative;
+    & .top-wrapper{
+        position: absolute;
+        top: 0;
+        @include flexSettings(space-between, flex-start);
+        width: 100%;
+        & .logo{
+            max-width: 300px;
+            &__img{
+                width: 100%;
+            }
+        }
+    }
+    & .btn{
+        margin: auto;
+        @include buttonSettings;
+    }
+    &__title{
+        text-transform: uppercase;
+        font-size: 24px;
+        color: #fff;
+        font-family: $roboto;
+    }
+    &__nav{
+        @include flexSettings(center, center);
+        width: 60%;
+        height: 60px;
+        font-family: $roboto;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        text-transform: uppercase;
+        & a{
+            @include flexSettings(center, center);
+            width: 33%;
+            height: 100%;
+        }
+        & a:nth-of-type(2){
+            border-left: 2px #607d8b solid;
+            border-right: 2px #607d8b solid;
+        }
+    }
+}
