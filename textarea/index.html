@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <title>Textarea</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1 class="title">zen textarea</h1>
+        <div class="textarea">
+            <div class="toggler textarea__toggler" id="expand-btn">
+                <i class="fas fa-expand-arrows-alt"></i>
+                expand
+            </div>
+            <p class="textarea__label">What's on your mind?</p>
+            <textarea id="input" class="textarea__input" placeholder="Leave a comment"></textarea>
+            <button class="textarea__submit">Submit comment</button>
+        </div>
+        <div class="expanded" id="expanded-textarea">
+            <div class="toggler expanded__toggler" id="collapse-btn">
+                <i class="fas fa-compress"></i>
+                shrink
+            </div>
+            <textarea id="expanded-input" class="expanded__textarea"> dsadasdas </textarea>
+        </div>
+    </div>
+
+</body>
+<script src="index.js"></script>
+
+</html>
+
+<!-- <i class="fas fa-compress-arrows-alt"></i> - collapse
+<i class="fas fa-expand-arrows-alt"></i> - expand -->
