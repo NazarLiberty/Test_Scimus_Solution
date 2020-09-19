@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cantarell&display=swap");
+* {
+  box-sizing: border-box; }
+  * a:link {
+    color: inherit;
+    text-decoration: none; }
+  * a:visited {
+    color: inherit; }
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: center url("../img/header_background_v1.jpg") no-repeat;
+  background-size: cover;
+  position: relative; }
+  .header .top-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%; }
+    .header .top-wrapper .logo {
+      max-width: 300px; }
+      .header .top-wrapper .logo__img {
+        width: 100%; }
+  .header .btn {
+    margin: auto;
+    display: block;
+    width: 250px;
+    height: 50px;
+    background-color: #01acac;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Cantarell", sans-serif;
+    color: white;
+    text-transform: uppercase; }
+  .header__title {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #fff;
+    font-family: "Roboto", sans-serif; }
+  .header__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 60px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase; }
+    .header__nav a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 33%;
+      height: 100%; }
+    .header__nav a:nth-of-type(2) {
+      border-left: 2px #607d8b solid;
+      border-right: 2px #607d8b solid; }
