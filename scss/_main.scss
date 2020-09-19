@@ -17,6 +17,12 @@
     color: white;
     text-transform: uppercase;
     border: 0;
+    transition: .4s all ease;
+    &:hover{
+        cursor: pointer;
+       filter: hue-rotate(29deg)
+       
+    }
 }
 *{
     box-sizing: border-box;
@@ -76,6 +82,10 @@
             @include flexSettings(center, center);
             width: 33%;
             height: 100%;
+            transition: .2s all ease-in;
+            &:hover{
+                background: rgba(0, 0, 0, 0.295);
+            }
         }
         & a:nth-of-type(2){
             border-left: 2px #607d8b solid;
@@ -120,7 +130,7 @@ main{
         margin-bottom: 20px;
         padding: 10px 25px 10px 10px;
         & img{
-            width: 280x;
+            width: 280px;
             height: 280px;
         }
         & .post{
@@ -168,5 +178,71 @@ main{
     & p{
         margin: 0 0 30px 0;
         font-size: $standartFontSize;
+    }
+    & img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.contact-form{
+    width: 100%;
+    font-family: $roboto;
+    margin-top: 60px;
+    &__text-block{
+        text-align: right;
+        & h4, h1{
+            text-transform: uppercase;
+            margin: 0;
+        }
+    }
+    .form-block{
+        padding-bottom: 25px;
+        padding-top: 50px;
+        flex-wrap: wrap;
+        @include flexSettings(space-between, flex-start);
+        &__subtitle{
+            position: absolute;
+            top: -22px;
+            right: 0;
+            color: $basicColor;
+            font-size: $standartFontSize;
+        }
+        &__name,&__email{
+           position: relative;
+        }
+        &__text{
+            position: relative;
+            margin-top: 50px;
+        }
+        & input[type]{
+            width: 495px;
+            height: 50px;
+            border: 1px solid $basicColor;
+            padding-left: 10px;
+            font-size: 20px;
+            &:focus{
+                outline: none;
+            }
+        }
+        &__text{
+            width: 100%;
+            & textarea{
+                width: inherit;
+                height: 120px;
+                border: 1px solid $basicColor;
+                font-size: $standartFontSize;
+                padding: 5px;
+                &:focus{
+                    outline: none;
+                }
+            }
+           
+        }
+        &__btn{
+            @include buttonSettings;
+            display: block;
+            margin-left: auto;
+            margin-top: 20px;
+        }
     }
 }

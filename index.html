@@ -188,17 +188,32 @@
       </section>
 
       <section class="contact-form" id="contact">
-        <h1>CONTACT US</h1>
-        <h4>For any questions you may have, you can write us:</h4>
-
+        <div class="contact-form__text-block">
+          <h1>CONTACT US</h1>
+          <h4>For any questions you may have, you can write us:</h4>
+        </div>
         <!-- TODO: write form fields -->
-
+        <form class='form-block' id="form">
+          <div class="form-block__name">
+            <label class="form-block__subtitle">Full name *</label>
+            <input type="text" name="name" form="form">
+          </div>
+          <div class="form-block__email">
+            <label class="form-block__subtitle">Email address *</label>
+            <input type="email" name="email" form="form">
+          </div>
+          <div class="form-block__text">
+            <label class="form-block__subtitle">Write your question below</label>
+            <textarea name="text" form="form"></textarea>
+          </div>
+          <button type="submit" class="form-block__btn"> send </button>
+        </form>
       </section>
     </main>
-    <footer>
-      <span>&#169; 2019 Exploring the world</span>
-    </footer>
   </div>
+  <footer>
+    <span>&#169; 2019 Exploring the world</span>
+  </footer>
 </body>
 
 </html>
